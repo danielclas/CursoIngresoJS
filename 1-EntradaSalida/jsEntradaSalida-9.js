@@ -4,18 +4,19 @@ mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
-
-	var salario; //creo las variables
+	var salario;//creo las variables, incluido el aumento por separado para luego sumarlo
 	var aumento;
+	var conaumento;
 
-	salario=sueldo.value; //asigno el valor a las variables a traves del ID
+	salario=sueldo.value;	//tomo dato de salario por id
 
-	salario=parseInt(salario); //transformo el valor a entero
+	salario=parseInt(salario); //paso dato de id a entero
 
-	aumento=salario*10/100+salario; //defino la variable como aumento + sueldo
+	aumento=salario*10/100; //realizo la operacion para conocer el aumento
+	conaumento=salario+aumento;//sumo el salario actual mas el aumento
 
-	resultado.value=aumento; //muestro la variable aumento
-
+	resultado.value=conaumento;//muestro el salario con aumento incluido
+	
 
 
 	

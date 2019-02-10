@@ -3,20 +3,23 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
+	var primero; //defino las variables
+	var segundo;
+	var suma
 
-	var primerNumero;
-	var segundoNumero;
-	var resultado;
+	primero=numeroUno.value; //asigno valor a traves de id
+	segundo=numeroDos.value;
 
-	primerNumero=numeroUno.value;
-	segundoNumero=numeroDos.value;
+	primero=parseInt(primero); //transformo datos ingresados a enteros
+	segundo=parseInt(segundo); //siempre ingresar nombre de variable despues de parseInt
 
-	primerNumero=parseInt(primerNumero);
-	segundoNumero=parseInt(segundoNumero);
+	suma=(primero+segundo); //indico que la variables suma = primero+segundo
 
-	resultado=(primerNumero+segundoNumero);
 
-	alert("La suma de los numeros es " + resultado);
+	alert("El resultado es "+suma); //muestro resultado por alert
+
+
+
 
 
 
