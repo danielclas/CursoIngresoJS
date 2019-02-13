@@ -4,31 +4,37 @@ B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en
 */
 function FahrenheitCentigrados () 
 {
-	var temp;
+	var enfahrenheit;
 
-	temp=Temperatura.value;
+	enfahrenheit=Temperatura.value;
 
-	temp=parseInt(temp);
+	enfahrenheit=parseInt(enfahrenheit);
 
 	var acentigrados;
 
-	acentigrados=(temp-32)/1.8;
+	acentigrados=(enfahrenheit-32)/1.8;
 
-	alert(temp+" grados fahrenheit son "+acentigrados+" grados celsius");
+	alert(enfahrenheit+" grados fahrenheit son "+acentigrados+" grados centigrados");
+
+	
 }
 
 function CentigradosFahrenheit () 
 {
-	var temp;
+	var encentigrados;
 
-	temp=Temperatura.value;
+	encentigrados=Temperatura.value;
 
-	temp=parseInt(temp);
+	encentigrados=parseInt(encentigrados);
 
 	var afahrenheit;
 
-	afahrenheit=(temp*1.8)+32;
+	afahrenheit=encentigrados*1.8+32;
 
-	alert(temp+" grados centigrados son "+afahrenheit+" grados fahrenheit");
+	alert(encentigrados+" grados centigrados son "+afahrenheit+" grados fahrenheit");
+
+
+
+
 	
 }
