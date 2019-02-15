@@ -21,3 +21,5 @@ function mostrar()
 	alert("Tenes dos mascotas: "+mascota1+" y "+mascota2+", que pesan "+peso1+" y "+peso2+" kilos, y la suma de los pesos es: "+suma);
 
 }
+		
+		
