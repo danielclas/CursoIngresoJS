@@ -6,24 +6,25 @@ function mostrar()
 
 	numero=Math.floor((Math.random() * 10) + 1);
 
-	if(numero>8 && numero<11)
+	if(numero>8)
 	{
-			mensaje="Excelente";
+			mensaje="Excelente, su nota es "+numero;
 	}
 	else
 	{	if(numero>4)
 		{
-					mensaje="Aprobó";
+				mensaje="Aprobó, su nota es "+numero;
 		}
 		else
 		{
-				mensaje="Vamos, la próxima se puede";
+				mensaje="Vamos, la próxima se puede. Tu nota es "+numero;
 		}
 
 
-		}
+	}
 
-	alert("Su nota es "+numero+", "+mensaje);
+	alert(mensaje);
+	console.log(numero);
 
 
 	
