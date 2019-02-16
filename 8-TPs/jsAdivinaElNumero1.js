@@ -17,6 +17,8 @@ function comenzar()
 		//alert(numeroSecreto );
 	contadorIntentos=0;
 
+	console.log(numeroSecreto);
+
 }
 
 function verificar()
@@ -30,7 +32,7 @@ function verificar()
 	intentos.value=contadorIntentos;
 
 	numeroIngresado=numero.value;
-	//numeroIngresado=parseInt(numeroIngresado);
+	numeroIngresado=parseInt(numeroIngresado);
 
 	//alert(numeroIngresado);
 
@@ -49,9 +51,14 @@ function verificar()
 			mensaje="Te pasaste";
 		}
 
+	
+	}
+
 	}
 
 	alert(mensaje);
+
+
 
 
 	
