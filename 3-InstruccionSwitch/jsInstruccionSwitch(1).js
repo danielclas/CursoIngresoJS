@@ -9,28 +9,23 @@ mesdelaño=mes.value;
 switch(mesdelaño) {
 	
 	case "Enero":
-		mensaje="Que comiences bien el año";
+		alert("Que comiences bien el año");
 			break;
 
 	case "Marzo":
-		mensaje="A clases!";
+		alert("A clases!");
 			break;
-
 
 	case "Julio":
-		mensaje="Se vienen las vacaciones";
+		alert("Se vienen las vacaciones");
 			break;
-
 
 	case "Diciembre":
-		mensaje="Felices fiesta";
+		alert("Felices fiestas");
 			break;
-
-
 
 }
 
-alert(mensaje);
 
 
 
