@@ -7,7 +7,7 @@ function mostrar()
 	años=edad.value;
 	años=parseInt(años);
 
-	if(años>18)
+	if(años>=18)
 	{
 		mensaje="Mayor de edad";
 	}

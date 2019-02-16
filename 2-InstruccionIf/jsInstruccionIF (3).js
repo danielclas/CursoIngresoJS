@@ -12,10 +12,9 @@ function mostrar()
 		mensaje="Es mayor de edad";
 	}
 	else
-	{	if(años<18)
-		{
-			mensaje="Es menor de edad";
-		}
+	{	
+		mensaje="Es menor de edad";
+		
 	}
 
 		alert(mensaje);

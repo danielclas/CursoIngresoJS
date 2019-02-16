@@ -1,21 +1,14 @@
 function mostrar()
 {//SIN RESOLVER
 //tomo la edad  
-	var años;
+	var edad;
 
-	años=edad.value;
-	años=parseInt(años);
+	edad=document.getElementbyId('edad').value;
+	edad=parseInt(edad);
 
-	if (años<13)
-		{
-			alert("No es adolescente");
-		}
-	else
+	if (edad<13 || edad>17)
 	{
-		if(años>17)
-		{
-			alert("No es adolescente");
-		}
+		alert("No es adolescente");
 	}
 
 

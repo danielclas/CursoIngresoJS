@@ -7,7 +7,7 @@ function mostrar()
 	años=edad.value;
 	estado=estadoCivil.value;
 
-	if(años>18 && estado=="Soltero")
+	if(años>=18 && estado=="Soltero")
 	{
 		alert("Es soltero y no es menor");
 	}
