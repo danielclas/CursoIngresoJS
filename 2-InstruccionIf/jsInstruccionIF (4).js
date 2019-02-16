@@ -9,7 +9,7 @@ function mostrar()
 
 	if(años<18 && años>13)
 		{
-			alert("Es adolescente")
+			alert("Es adolescente");
 		}
 
 	
