@@ -40,6 +40,7 @@ function mostrar()
 		case 18:
 		case 19:
 			mensaje="Es de tarde";
+				break;
 		default:
 			mensaje="La hora no existe";
 				break;

@@ -10,35 +10,91 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-	var lamparas;
 	var precio;
-	var valordescuento;
-	var preciocondescuento;
-	var fabricante;
+	var lamparitas;
+	var marca;
+	var descuento;
+	var condescuento;
+	var preciofinal;
+	var impuesto;
+	var conimpuesto;
 
-	lamparas=Cantidad.value;
 	precio=35;
 
-	fabricante=Marca.value;
+	lamparitas=document.getElementById('Cantidad').value;
+	lamparitas=parseInt(lamparitas);
 
-	if(lamparas>=6)
+	marca=document.getElementById('Marca').value;
+
+
+	if(lamparitas>=6)
 	{
-		valordescuento=precio*50/100;
-		preciocondescuento=precio-valordescuento;
+		descuento=precio*50/100;
 	}
 	else
-	{ 
-		if(lamparas==5)
+	{
+		if(marca=="ArgentinaLuz" && lamparitas==5)
 		{
-			switch(fabricante){
-				case "ArgentinaLuz":
-					valordescuento=
+			descuento=precio*40/100;
+		}
+		else
+		{	
+			if(marca!="ArgentinaLuz" && lamparitas==5)
+			{
+				descuento=precio*30/100;
+			}
+			else
+			{
+				if((marca=="ArgentinaLuz" || marca=="FelipeLamparas" )&& lamparitas==4)
+				{
+					descuento=precio*25/100;
+				}
+				else
+				{
+					if((marca!="ArgentinaLuz" || marca!="FelipeLamparas" )&& lamparitas==4)
+					{
+						descuento=precio*20/100;
+					}
+					else
+					{
+						if(marca=="ArgentinaLuz" && lamparitas==3)
+						{
+							descuento=precio*15/100;
+						}
+						else
+						{
+							if(marca=="FelipeLamparas" && lamparitas==3)
+							{
+								descuento=precio*10/100;
+							}
+							else
+							{
+								descuento=precio*5/100;
+							}
+						}
+					}
+				}
 
 			}
 
 		}
 	}
 
-	precioDescuento.value=preciocondescuento*lamparas;
+	condescuento=precio-descuento;
+	preciofinal=condescuento*lamparitas;
+
+	impuesto=preciofinal*10/100;
+	conimpuesto=preciofinal+impuesto;
+
+	if(preciofinal>120)
+	{
+		alert("Usted pago $"+conimpuesto+", siendo $"+impuesto+" el impuesto que se pago");
+    }
+    else
+    {
+    	document.getElementById('precioDescuento').value=preciofinal;
+
+    }
+
  	
 }
