@@ -10,7 +10,6 @@ function mostrar()
 		numero=prompt("Ingrese otro numero");
 	}
 
-	alert(numero);
-
+	document.getElementById('Numero').value=numero;
 
 }//FIN DE LA FUNCIÓN

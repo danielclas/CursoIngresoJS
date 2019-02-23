@@ -3,6 +3,7 @@ function mostrar()
 	var acumulador;
 	var contador;
 	var numero;
+	var promedio;
 
 	contador=0;
 	acumulador=0;
@@ -14,9 +15,7 @@ function mostrar()
 		numero=parseInt(numero);
 		acumulador=acumulador+numero;
 		
-
 	}
-	
 
 
 	document.getElementById('suma').value=acumulador;

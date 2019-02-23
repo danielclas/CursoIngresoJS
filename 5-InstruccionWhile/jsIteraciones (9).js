@@ -39,6 +39,7 @@ function mostrar()
 			}			
 		}
 		
+		Cambiar "IFs" por flag||comparacion
 		
 		respuesta=prompt("'si' para continuar");
 
