@@ -1,20 +1,24 @@
 function mostrar()
 {
 
-	var contador=0;
-	var acumulador=0;
-	var respuesta='si';
+	var contador;
+	var acumulador;
+	var respuesta;
+	var numero;
 
-	while(respuesta=='si')
-	{
-		contador=contador+1;
-		numero=prompt("Ingrese un numero"+contador+"# :");
+	contador=0;
+	acumulador=0;
+	respuesta="si";
+
+	while(respuesta=="si")
+	{	
+		numero=prompt("Ingrese un numero");
 		numero=parseInt(numero);
+		contador=contador+1;
 		acumulador=acumulador+numero;
-		
-		respuesta=prompt("'si' para continuar");
-
+		respuesta=prompt("Desea ingresar otro numero?");
 	}
+
 
 	document.getElementById('suma').value=acumulador;
 	document.getElementById('promedio').value=acumulador/contador;

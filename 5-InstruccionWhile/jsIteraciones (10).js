@@ -1,83 +1,77 @@
 function mostrar()
 {
 
-	var contador; 
-	var acumulador;
-	var numero;	
+	var contador;
 	var respuesta;
-	var suma;
-	var resta;
-	var sumapositivos;
-	var sumanegativos;
-	var contadornegativos;
+	var numero;
+	var respuesta;
+	var positivos;
+	var negativos;
 	var contadorpositivos;
+	var contadornegativos;
 	var contadorceros;
-	var contadorpares;
 	var promediopositivos;
 	var promedionegativos;
 	var diferencia;
+	var contadorpares;
+	var resto;
 
-	contador=0;
-	acumulador=0;
-	contadornegativos=0;
-	contadorpositivos=0;
-	contadorceros=0;
 	respuesta="si";
+	positivos=0;
+	negativos=0;
+	contadorpositivos=0;
+	contadornegativos=0;
+	contadorceros=0;
 	contadorpares=0;
-
-	sumanegativos=0;
-	sumapositivos=0;
 
 	while(respuesta=="si")
 	{
-	
-		contador=contador+1;
-		numero=prompt("Ingrese un numero"+contador+"# :");
+		numero=prompt("Ingrese un numero");
 		numero=parseInt(numero);
-		//acumulador=acumulador+numero;
-		
-		respuesta=prompt("'si' para continuar");
 
 		if(numero>0)
 		{
+			positivos=positivos+numero;
 			contadorpositivos=contadorpositivos+1;
-			sumapositivos=sumapositivos+numero;
-
 		}
 		else
 		{
 			if(numero<0)
 			{
+				negativos=negativos+numero;
 				contadornegativos=contadornegativos+1;
-				sumanegativos=sumanegativos+numero;
 			}
 			else
-			{	
+			{
 				contadorceros=contadorceros+1;
 			}
 		}
 
-		if(numero%2==0 && numero!=0)
-		{
+		resto=numero%2;
 
+		if(resto==0)
+		{
 			contadorpares=contadorpares+1;
 		}
+	
 
+		respuesta=prompt("Escriba si para ingresar otro numero");
 	}
 
-	promediopositivos=sumapositivos/contadorpositivos;
-	promedionegativos=sumanegativos/contadornegativos;
-	diferencia=sumapositivos+sumanegativos;
+	promediopositivos=positivos/contadorpositivos;
+	promedionegativos=negativos/contadornegativos;
+	diferencia=positivos+negativos;
 
-
-	document.write(contadorpositivos+" numeros positivos y "
-		+contadornegativos+" numeros negativos. Suma negativos: "
-		+sumanegativos+" Suma positivos: "+sumapositivos+
-		"Cantidad de pares: "+contadorpares+
-		" Promedio negativos: "+promedionegativos+
-		" Promedio positivos: "+promediopositivos+
-		"La diferencia es: "+diferencia+
-		"Cantidad de ceros: "+contadorceros);
+	document.write(
+		"Suma de positivos: "+positivos+"<br>"+
+		"Suma de negativos: "+negativos+"<br>"+
+		"Cantidad de positivos: "+contadorpositivos+"<br>"+
+		"Contador negativos: "+contadornegativos+"<br>"+
+		"Cantidad de ceros:"+contadorceros+"<br>"+
+		"Cantidad de pares: "+contadorpares+"<br>"+
+		"Promedio positivos: "+promediopositivos+"<br>"+
+		"Promedio negativos:"+promedionegativos+"<br>"+
+		"Diferencia: "+diferencia+"<br>");
 
 
 }//FIN DE LA FUNCIÓN

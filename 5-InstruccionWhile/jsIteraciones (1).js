@@ -1,24 +1,16 @@
 function mostrar()
+{
 
-
-
-{	
 	var contador;
-	var acumulador;
 
-	contador=10;
-	acumulador=0;
+	contador=0
 
-	while(contador>0)
+	while(contador<10)
 	{
-		console.log(contador);
-		contador=contador-1;
-		acumulador=acumulador+1;
-		//console.log(contador);
-		alert(acumulador);
+		contador=contador+1
+		alert(contador);
 	}
 	
-	//alert(acumulador);
 
 
 }//FIN DE LA FUNCIÓN
