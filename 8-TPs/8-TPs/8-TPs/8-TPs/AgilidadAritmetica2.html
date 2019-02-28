@@ -10,20 +10,19 @@
 		<!--final de Estilos-->
 
 		<!--Lógica-Programación-->
-		<script type="text/javascript" src="jsFerreteFacturacion.js"></script>
+		<script type="text/javascript" src="jsAgilidadAritmetica2.js"></script>
         <!--Final de Lógica-Programación -->
-		
 		
 			
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<body>
+	<body onload="comenzar()">
 
 <div class=" animated bounceInRight header">
     
 
-     <center><h5>TP <strong> Ejercicio 1</strong> </h5></center> 
+     <center><h5>TP <strong> Ejercicio 10</strong> </h5></center> 
    <a  class="MiBotonUTNnav" onclick="location.href='index.html'" ><i class="far fa-hand-point-left"></i>Men&uacute; ejercicios</a> 
 
 </div>
@@ -35,17 +34,15 @@
 
   <div class="col-6 col-s-9">
   	<form id="FormIngreso" class=" animated bounceInLeft" class=" animated bounceInLeft"class=" animated bounceInLeft">
-	   <h1>Ferrete facturación</h1>
-	 			<input type="text"  placeholder="Ingrese Precio" id="PrecioUno">
-				<input type="text"  placeholder="Ingrese Precio" id="PrecioDos">
-				<input type="text"  placeholder="Ingrese Precio" id="PrecioTres">
-				<br>
-				
-				  	<a  class="MiBotonUTNnav" onclick="Sumar()" >Sumar</a>
-				  	<br><br>
-				  	<a  class="MiBotonUTNnav" onclick="Promedio()" >Promedio</a>
-				  	<br><br>
-				  	<a  class="MiBotonUTNnav" onclick="PrecioFinal()" >Precio Final</a>
+	   <h1>Agilidad aritmética 2.0</h1>
+	 		<input type="text" readonly id="PrimerNumero" placeholder="Primer número">
+			<input type="text" readonly id="Operador"  placeholder="Operador matemático" >
+			<input type="text" readonly id="SegundoNumero"  placeholder="Segundo número">
+			<input type="text"  id="Respuesta"  placeholder="Tu respuesta">
+				<center>
+					<img src="imagenes/interrogacion.jpg" >
+				</center>
+				  	<a  class="MiBotonUTNnav" onclick="Responder()" >Verificar resultado</a>
 	 </form>	
   </div>
 
@@ -53,11 +50,7 @@
     <div class="aside animated bounceInUp">
     		<h2>Enunciado:</h2>
 				<h3>
-					1.	Para el departamento de facturación:
-						<br>A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
-						<br>B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
-						<br>C.	ingresar tres precios de productos sumarlos y mostrar precio final (más IVA 21%).
-
+						Además de lo anterior, ahora se agregara un temporizador que a los 4(cuatro) segundos dará por terminado el juego y se verificará si el resultado es el correcto.
 
 
 				</h3>

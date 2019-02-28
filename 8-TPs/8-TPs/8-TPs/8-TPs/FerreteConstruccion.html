@@ -10,7 +10,7 @@
 		<!--final de Estilos-->
 
 		<!--Lógica-Programación-->
-		<script type="text/javascript" src="jsFerreteFacturacion.js"></script>
+		<script type="text/javascript" src="jsFerreteConstruccion.js"></script>
         <!--Final de Lógica-Programación -->
 		
 		
@@ -23,7 +23,7 @@
 <div class=" animated bounceInRight header">
     
 
-     <center><h5>TP <strong> Ejercicio 1</strong> </h5></center> 
+     <center><h5>TP <strong> Ejercicio 2</strong> </h5></center> 
    <a  class="MiBotonUTNnav" onclick="location.href='index.html'" ><i class="far fa-hand-point-left"></i>Men&uacute; ejercicios</a> 
 
 </div>
@@ -35,17 +35,17 @@
 
   <div class="col-6 col-s-9">
   	<form id="FormIngreso" class=" animated bounceInLeft" class=" animated bounceInLeft"class=" animated bounceInLeft">
-	   <h1>Ferrete facturación</h1>
-	 			<input type="text"  placeholder="Ingrese Precio" id="PrecioUno">
-				<input type="text"  placeholder="Ingrese Precio" id="PrecioDos">
-				<input type="text"  placeholder="Ingrese Precio" id="PrecioTres">
+	   <h1>Ferrete construcción</h1>
+	 			<input type="text"  placeholder="Largo del terreno" id="Largo">
+				<input type="text"  placeholder="Ancho del terreno" id="Ancho">
+				<input type="text"  placeholder="Radio del terreno" id="Radio">
 				<br>
 				
-				  	<a  class="MiBotonUTNnav" onclick="Sumar()" >Sumar</a>
+				  	<a  class="MiBotonUTNnav" onclick="Rectangulo()" >A- Rectangulo de alambre</a>
 				  	<br><br>
-				  	<a  class="MiBotonUTNnav" onclick="Promedio()" >Promedio</a>
+				  	<a  class="MiBotonUTNnav" onclick="Circulo()" >B- Circulo de alambre</a>
 				  	<br><br>
-				  	<a  class="MiBotonUTNnav" onclick="PrecioFinal()" >Precio Final</a>
+				  	<a  class="MiBotonUTNnav" onclick="Materiales()" >C- Materiales contrapiso</a>
 	 </form>	
   </div>
 
@@ -53,10 +53,10 @@
     <div class="aside animated bounceInUp">
     		<h2>Enunciado:</h2>
 				<h3>
-					1.	Para el departamento de facturación:
-						<br>A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
-						<br>B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
-						<br>C.	ingresar tres precios de productos sumarlos y mostrar precio final (más IVA 21%).
+					2.	Para el departamento de Construcción:
+						<br>A.	 mostrar la cantidad de alambre a comprar  si se ingresara el largo y el ancho de un terreno rectangular y se debe alambra con tres hilos de alambre.
+						<br>B.	mostrar la cantidad de alambre a comprar  si se ingresara el radio  de un terreno circular y se debe alambra con tres hilos de alambre.
+						<br>C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de cal, debemos mostrar cuantas bolsas se necesitan de cada uno para las medidas del terreno rectangular.
 
 
 

@@ -26,64 +26,117 @@ function CalcularPrecio ()
 
 	marca=document.getElementById('Marca').value;
 
+	descuento=0;
 
-	if(lamparitas>=6)
+	switch(cantidad)
 	{
-		descuento=precio*50/100;
-	}
-	else
-	{
-		if(marca=="ArgentinaLuz" && lamparitas==5)
-		{
-			descuento=precio*40/100;
-		}
-		else
-		{	
-			if(marca!="ArgentinaLuz" && lamparitas==5)
+		case 5:
+			if(marca=="ArgentinaLuz")
 			{
-				descuento=precio*30/100;
+				descuento=0.40;
 			}
 			else
 			{
-				if((marca=="ArgentinaLuz" || marca=="FelipeLamparas" )&& lamparitas==4)
+				descuento=0.30;
+			}
+				break;
+		case 4:
+				if(marca=="ArgentinaLuz" || marca=="“FelipeLamparas”")
 				{
-					descuento=precio*25/100;
+					descuento=0.25;
 				}
 				else
 				{
-					if((marca!="ArgentinaLuz" || marca!="FelipeLamparas" )&& lamparitas==4)
+					descuento=0.20;
+				}
+				break;
+		case 3:
+				if(marca=="ArgentinaLuz")
+				{
+					descuento=0.15;
+				}
+				else
+				{
+					if(marca=="“FelipeLamparas”")
 					{
-						descuento=precio*20/100;
-					}
+						descuento=0.10
+					}	
 					else
 					{
-						if(marca=="ArgentinaLuz" && lamparitas==3)
-						{
-							descuento=precio*15/100;
-						}
-						else
-						{
-							if(marca=="FelipeLamparas" && lamparitas==3)
-							{
-								descuento=precio*10/100;
-							}
-							else
-							{
-								descuento=precio*5/100;
-							}
-						}
+						descuento=0.05;
 					}
+					break;
+		default:
+				if(lamparitas>=6)
+				{
+					descuento=0.50;
 				}
 
+	}
+
+	/*
+	if(lamparitas>=6)
+	{
+		descuento=0.50;
+	}
+	else
+	{
+		if(lamparitas==5)
+		{
+			if(marca=="ArgentinaLuz")
+			{
+				descuento=0.40;
+			}
+			else
+			{
+				descuento=0.30;
 			}
 
 		}
+		else
+		{
+			if(cantidad==4)
+			{
+				if(marca=="ArgentinaLuz" || marca=="“FelipeLamparas”")
+				{
+					descuento=0.25;
+				}
+				else
+				{
+					descuento=0.20;
+				}
+
+			}
+			else
+			{
+				if(cantidad==3)
+				{
+					if(marca=="ArgentinaLuz")
+					{
+						descuento=0.15;
+					}
+					else
+					{
+						if(marca=="“FelipeLamparas”")
+						{
+							descuento=0.10
+						}	
+						else
+						{
+							descuento=0.05;
+						}
+					}
+				}
+		   	}
+		 }
 	}
+	*/
 
-	condescuento=precio-descuento;
-	preciofinal=condescuento*lamparitas;
 
-	impuesto=preciofinal*10/100;
+	condescuento=precio-(precio*descuento);
+	preciofinal=condescuento*cantidad;
+
+	impuesto=preciofinal*0.10;
 	conimpuesto=preciofinal+impuesto;
 
 	if(preciofinal>120)

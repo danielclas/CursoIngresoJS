@@ -23,13 +23,12 @@ function Rectangulo ()
 
 	alambre=perimetro*3;
 
-	alert("La cantidad de hilos de alambre que se necesitan es "+alambre);
-
+	alert("La cantidad de hilos de alambre a comprar es "+alambre);
 }
 function Circulo () 
 {
 	var radio;
-	
+
 	radio=Radio.value;
 
 	radio=parseInt(radio);
@@ -38,37 +37,37 @@ function Circulo ()
 
 	circunferencia=2*3.14159*radio;
 
-	var alambre;
+	var hilosalambre;
 
-	alambre=circunferencia*3;
+	hilosalambre=circunferencia*3;
 
-	alert("Usted necesitara "+alambre+" hilos de alambre");
-
+	alert("Usted necesita "+hilosalambre+" hilos de alambre");
 	
 }
 function Materiales () 
 {
-	var ellargo;
 	var elancho;
+	var ellargo;
 
-	ellargo=Largo.value;
 	elancho=Ancho.value;
+	ellargo=Largo.value;
 
-	ellargo=parseInt(ellargo);
 	elancho=parseInt(elancho);
+	ellargo=parseInt(ellargo);
 
 	var area;
 
-	area=ellargo*elancho;
+	area=elancho*ellargo;
 
 	var cemento;
 
-	cemento=area*3;
+	cemento=area*2;
 
 	var cal;
 
-	cal=area*2;
+	cal=area*3;
 
-	alert("Para "+area+"m2 de contrapiso usted necesitara "+cemento+" bolsas de cemento y "+cal+" bolsas de cal");
-	
+	alert("Usted necesita "+cemento+" bolsas de cemento y "+cal+" bolsas de cal");
+
+
 }

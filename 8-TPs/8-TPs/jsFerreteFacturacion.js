@@ -8,21 +8,19 @@ function Sumar ()
 	var precio1;
 	var precio2;
 	var precio3;
+	var suma;
 
-	precio1=PrecioUno.value;
-	precio2=PrecioDos.value;
-	precio3=PrecioTres.value;
+	precio1=document.getElementById('PrecioUno').value;
+	precio2=document.getElementById('PrecioDos').value;
+	precio3=document.getElementById('PrecioTres').value;
 
 	precio1=parseInt(precio1);
 	precio2=parseInt(precio2);
 	precio3=parseInt(precio3);
 
-	var suma;
-
 	suma=precio1+precio2+precio3;
 
-	alert("El resultado de la suma es: "+suma);
-	
+	alert("La suma es: "+suma);
 	
 }
 function Promedio () 
@@ -30,44 +28,43 @@ function Promedio ()
 	var precio1;
 	var precio2;
 	var precio3;
+	var suma;
+	var promedio;
 
-	precio1=PrecioUno.value;
-	precio2=PrecioDos.value;
-	precio3=PrecioTres.value;
+	precio1=document.getElementById('PrecioUno').value;
+	precio2=document.getElementById('PrecioDos').value;
+	precio3=document.getElementById('PrecioTres').value;
 
 	precio1=parseInt(precio1);
 	precio2=parseInt(precio2);
 	precio3=parseInt(precio3);
 
-	var promedio;
-
-	promedio=(precio1+precio2+precio3)/3;
+	suma=precio1+precio2+precio3;
+	promedio=suma/3;
 
 	alert("El promedio es: "+promedio);
-	
 }
 function PrecioFinal () 
 {
 	var precio1;
 	var precio2;
 	var precio3;
+	var suma;
+	var iva;
+	var coniva;
 
-	precio1=PrecioUno.value;
-	precio2=PrecioDos.value;
-	precio3=PrecioTres.value;
+	precio1=document.getElementById('PrecioUno').value;
+	precio2=document.getElementById('PrecioDos').value;
+	precio3=document.getElementById('PrecioTres').value;
 
 	precio1=parseInt(precio1);
 	precio2=parseInt(precio2);
 	precio3=parseInt(precio3);
 
-	var suma;
-
 	suma=precio1+precio2+precio3;
+	iva=suma*21/100;
+	coniva=suma+iva;
 
-	var coniva;
-
-	coniva=suma+(suma*21/100);
-
-	alert("El precio con IVA es "+coniva);
+	alert("El precio con iva es: "+coniva);
 	
 }

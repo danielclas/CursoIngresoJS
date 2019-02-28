@@ -13,53 +13,14 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 numeroSecreto=Math.floor((Math.random() * 100) + 1);		
+	 
 		//alert(numeroSecreto );
-	contadorIntentos=0;
-
-	console.log(numeroSecreto);
+	
 
 }
 
 function verificar()
 {
-
-	var numeroIngresado;
-	var mensaje;
-
-	contadorIntentos=contadorIntentos+1;
-
-	intentos.value=contadorIntentos;
-
-	numeroIngresado=numero.value;
-	numeroIngresado=parseInt(numeroIngresado);
-
-	//alert(numeroIngresado);
-
-	if(numeroIngresado==numeroSecreto)
-	{
-		mensaje="sos un genio, en solo "+contadorIntentos+" intentos";
-	}
-	else
-	{
-		if(numeroIngresado<numeroSecreto)
-		{
-			mensaje="Falta";
-		}
-		else
-		{
-			mensaje="Te pasaste";
-		}
-
 	
-	}
-
-	
-
-	alert(mensaje);
-
-
-
-
 	
 }
