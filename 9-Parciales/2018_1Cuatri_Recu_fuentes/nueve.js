@@ -1,6 +1,126 @@
 function mostrar()
 {
+	
 	var marca;
+	var litros;
+	var precio;
+	var respuesta;
+	var contadorPreciosPares;
+	var menorPrecio;
+	var menorPrecioMarca;
+	var menorPrecioLitros;
+	var contador;
+	var contadorGaseosasMenos50;
+	var acumuladorPrecio;
+	var menosDe3PrecioMin;
+	var menosde3PrecioMax;
+	var menosde3PrecioMaxMarca;
+	var menosDe3PrecioMinMarca;
+	var menosde3Contador;
+
+
+	respuesta="si";
+	contador=0;
+	contadorPreciosPares=0;
+	contadorGaseosasMenos50=0;
+	acumuladorPrecio=0;
+	menosde3Contador=0;
+
+	while(respuesta=="si")
+	{
+		marca=prompt("Ingrese la marca");
+
+		litros=prompt("Ingrese la cantidad de litros");
+		litros=parseInt(litros);
+
+		while(litros!=1 && litros!=2 && litros!=3)
+		{
+			litros=prompt("Ingrese valor de litros valido");
+			litros=parseInt(litros);
+		}
+
+		precio=prompt("Ingrese el precio");
+		precio=parseInt(precio);
+
+		while(precio<30 || precio>100)
+		{
+			precio=prompt("Ingrese un precio valido");
+			precio=parseInt(precio);
+		}
+
+		acumuladorPrecio=acumuladorPrecio+precio;
+
+		if(precio%2==0)
+		{
+			contadorPreciosPares++;
+		}
+
+		if(contador==0)
+		{
+			menorPrecio=precio;
+			menorPrecioMarca=marca;
+			menorPrecioLitros=litros;
+		}
+		else
+		{
+			if(precio<menorPrecio)
+			{
+				menorPrecio=precio;
+				menorPrecioMarca=marca;
+				menorPrecioLitros=litros;
+			}
+		}
+
+		if(precio<50)
+		{
+			contadorGaseosasMenos50++;
+		}
+
+		if(litros<3)
+		{
+			if(menosde3Contador==0)
+			{  
+				menosDe3PrecioMin=precio;
+				menosde3PrecioMax=precio;
+				menosde3PrecioMaxMarca=marca;
+				menosDe3PrecioMinMarca=marca;
+				menosde3Contador++;
+			}
+
+			if(precio<menosDe3PrecioMin)
+			{
+				menosDe3PrecioMin=precio;
+				menosDe3PrecioMinMarca=marca;
+			}
+			else
+			{   
+				if(precio>menosde3PrecioMax)
+				{
+					menosde3PrecioMax=precio;
+					menosde3PrecioMaxMarca=marca;
+				}
+			}
+		}
+
+
+		contador++;
+		respuesta=prompt("Ingrese si para ingresar otro dato");
+	}
+
+	promedio=acumuladorPrecio/contador;
+
+	document.write("1) Cant. Precio Pares: "+contadorPreciosPares+"<br>"+
+		"2) Marca del mas barato: "+menorPrecioMarca+" litros: "+menorPrecioLitros+"<br>"+
+		"3) Cant. de gaseosas que valen menos de 50: "+contadorGaseosasMenos50+"<br>"+
+		"4) Promedio del precio de todas las gasesosas: "+promedio+"<br>"+
+		"5) Menores a 3L, precio maximo: "+menosde3PrecioMax+", marca: "+menosde3PrecioMaxMarca+"<br>"+
+		"precio minimo: "+menosDe3PrecioMin+" marca: "+menosDe3PrecioMinMarca);
+
+}
+
+/* EJERCICIO EN CLASE
+
+var marca;
 	var tamaño;
 	var precio;
 	var mayorPrecio;
@@ -107,4 +227,6 @@ function mostrar()
 		"6) Marca del primer celular que vale $1000: "+celular1000+"<br>"+
 		"7) Precio del ultimo celular LG ingresado: "+precioUltimoLG);
 
-}
+
+
+*/
