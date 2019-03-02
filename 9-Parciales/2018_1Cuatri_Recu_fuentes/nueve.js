@@ -18,6 +18,7 @@ function mostrar()
 	var menosDe3PrecioMinMarca;
 	var menosde3Contador;
 
+	//Creo variables e inicializo contadores
 
 	respuesta="si";
 	contador=0;
@@ -25,6 +26,8 @@ function mostrar()
 	contadorGaseosasMenos50=0;
 	acumuladorPrecio=0;
 	menosde3Contador=0;
+
+	//Va a iterar solo hasta que el usuario no ingrese "si" como respuesta
 
 	while(respuesta=="si")
 	{
@@ -39,6 +42,8 @@ function mostrar()
 			litros=parseInt(litros);
 		}
 
+		//Pido, parseo y valido Marca y Litros
+
 		precio=prompt("Ingrese el precio");
 		precio=parseInt(precio);
 
@@ -50,10 +55,14 @@ function mostrar()
 
 		acumuladorPrecio=acumuladorPrecio+precio;
 
+		//Pido y parseo precio. Si es correcto lo acumulo para despues sacar promedio
+
 		if(precio%2==0)
 		{
 			contadorPreciosPares++;
 		}
+
+		//Si el precio dividido dos da resto 0, entonces es par.
 
 		if(contador==0)
 		{
@@ -61,7 +70,9 @@ function mostrar()
 			menorPrecioMarca=marca;
 			menorPrecioLitros=litros;
 		}
+		//Si es la primera vez iterando, tomo precio menor y marca y litros
 		else
+		//Si no lo es, entonces comparo 
 		{
 			if(precio<menorPrecio)
 			{
@@ -71,11 +82,13 @@ function mostrar()
 			}
 		}
 
+		//Si el precio es menor a 50, aumento este contador en 1
 		if(precio<50)
 		{
 			contadorGaseosasMenos50++;
 		}
 
+		//Comparo precio MIN y MAX de gaseosas menores a 3 litros
 		if(litros<3)
 		{
 			if(menosde3Contador==0)
@@ -85,6 +98,7 @@ function mostrar()
 				menosde3PrecioMaxMarca=marca;
 				menosDe3PrecioMinMarca=marca;
 				menosde3Contador++;
+				//Este contador es para que solo ingrese la primera vez que una gaseosa es menor a tres l
 			}
 
 			if(precio<menosDe3PrecioMin)
@@ -105,6 +119,7 @@ function mostrar()
 
 		contador++;
 		respuesta=prompt("Ingrese si para ingresar otro dato");
+		//Aumento el contador de las iteraciones en 1 y pregunto a usuario la respuesta.
 	}
 
 	promedio=acumuladorPrecio/contador;

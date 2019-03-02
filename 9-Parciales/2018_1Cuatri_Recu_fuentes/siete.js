@@ -11,11 +11,13 @@ function mostrar()
 	var contadorCombLiquido
 	var velocidadMaximaSolido;
 
+	//Creo variables e inicio contadores
+
 	contador=0;
 	acumuladorVelocidad=0;
 	contadorCombLiquido=0;
 
-
+	//La consigna pide iterar solo 5 veces
 	while(contador<5)
 	{
 		velocidadKM=prompt("Ingrese la velocidad");
@@ -29,6 +31,8 @@ function mostrar()
 
 		acumuladorVelocidad=acumuladorVelocidad+velocidadKM;
 
+		//Pido, parseo, y valido KM, y cuando es correcto acumulo
+
 		combustible=prompt("Ingrese tipo de combustible");
 
 		while(combustible!="s" && combustible!="l")
@@ -36,6 +40,9 @@ function mostrar()
 			combustible=prompt("Ingrese un combustible valido");
 		}
 
+		//Pido combustible y valido que sea "s" o "l"
+
+		//Averiguo velocidad minima y velocidad maxima cuando el combustible es "s"
 		if(contador==0)
 		{
 			velocidadMinima=velocidadKM;
@@ -64,13 +71,15 @@ function mostrar()
 			contadorCombLiquido=contadorCombLiquido+1;
 		}
 
-
+		//La consigna pide averiguar cuantas veces la velovidad es mayor a 100 y el combustible es liquido
 
 
 		contador=contador+1;
 	}
 
 	promedio=acumuladorVelocidad/5;
+
+	//Saco el promedio
 
 	alert("El promedio es: "+promedio+"   2) Velocidad mas baja: "+velocidadMinima+", combustible:   "+velocidadMinimaCombustible+
 		"    3) Combustibles liquidos velocidad mayor a 100: "+contadorCombLiquido+

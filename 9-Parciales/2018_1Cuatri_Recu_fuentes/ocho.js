@@ -14,6 +14,8 @@ function mostrar()
 	var superficiePaisSupMenor;
 	var promedio;
 
+	//Creo variables e inicializo contadores
+
 	respuesta="si";
 	contador=0;
 	contadorSupImpar=0;
@@ -22,11 +24,15 @@ function mostrar()
 	contadorSupMayora100=0;
 	acumuladorKM=0;
 
+	//Ingreso solo cuando la respuesta es "si"
+
 	while(respuesta=="si")
 	{
 		pais=prompt("Ingrese el nombre del pais");
 		superficie=prompt("Ingrese la superficie");
 		superficie=parseInt(superficie);
+
+		//Pido, valido y parseo pais y superficie
 
 		while(superficie<0 || superficie>10000)
 		{
@@ -36,16 +42,21 @@ function mostrar()
 
 
 		acumuladorKM=acumuladorKM+superficie;
+		//Si superficie es valida, acumulo
+
 
 		if(superficie%2!=0)
 		{
 			contadorSupImpar=contadorSupImpar+1;
 		}
 
+		//Si la superficie dividido dos NO da resto 0, entonces es impar
+
 		if(superficie<100)
 		{
 			contadorSupMenora100=contadorSupMenora100+1;
 		}
+		//Cuento las veces que una superficie es menor que 100 y otra cuando es igual
 		else
 		{
 			if(superficie==100)
@@ -57,8 +68,11 @@ function mostrar()
 				contadorSupMayora100=contadorSupMayora100+1;
 				paisSupMayora100=pais;
 			}
+			//El ejercicio solo pide el nombre del primer pais superficie mayor a 100
 		}
 
+
+		//Comparo superficie para hallar la supercicie menor y el nombre del pais
 		if(contador==0)
 		{
 			paisSupMenor=pais;
@@ -75,6 +89,7 @@ function mostrar()
 
 		contador=contador+1;
 		respuesta=prompt("Escriba si para ingresar otro dato");
+		//Acumulo 1 en el contador y pregunto al usuario si quiere ingresar otro dato
 	}
 
 	promedio=acumuladorKM/contador;
