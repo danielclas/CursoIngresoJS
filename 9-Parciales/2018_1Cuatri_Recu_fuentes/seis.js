@@ -21,6 +21,7 @@ aprobó y la nota es mayor a 8 se debe agregar el mensaje: "muy bien".
 		case 2:
 		case 3:
 			mensaje="La proxima se puede";
+				break;
 		case 4:
 		case 5:
 		case 6:
@@ -34,11 +35,13 @@ aprobó y la nota es mayor a 8 se debe agregar el mensaje: "muy bien".
 
 		case 7:
 		case 8:
+		case 9:
+		case 10:
 			mensaje="Aprobo";
 
 			if(nota>8 && nota<=10)
 			{
-				mensaje="Aprobo. Muy bien";
+				mensaje="Aprobo, Muy bien";
 			}
 			break;
 
