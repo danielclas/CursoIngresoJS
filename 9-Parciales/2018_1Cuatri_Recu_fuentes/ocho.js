@@ -1,5 +1,100 @@
 function mostrar()
 {
+	var marca;
+	var peso;
+	var temp;
+	var respuesta;
+	var contador;
+	var contadorPares;
+	var pesoMax;
+	var pesoMaxMarca;
+	var pesoMin;
+	var contadorBajoCero;
+	var acumuladorPeso;
+	var promedioPeso;
+
+	respuesta="si";
+	contadorPares=0;
+	contador=0;
+	contadorBajoCero=0;
+	acumuladorPeso=0;
+
+	while(respuesta=="si")
+	{
+		marca=prompt("Ingrese la marca del producto");
+
+		peso=prompt("Ingrese el peso");
+		peso=parseInt(peso);
+
+		while(peso<1 || peso>100)
+		{
+			peso=prompt("Ingrese un peso valido");
+			peso=parseInt(peso);
+		}
+
+		acumuladorPeso=acumuladorPeso+peso;
+
+		temp=prompt("Ingrese la temperatura");
+		temp=parseInt(temp);
+
+		while(temp<-30 || temp>30)
+		{
+			temp=prompt("Ingrese una temperatura valida");
+			temp=parseInt(temp);
+		}
+
+		if(temp%2==0)
+		{
+			contadorPares++;
+		}
+
+		if(contador==0)
+		{
+			pesoMax=peso;
+			pesoMaxMarca=marca;
+			pesoMin=peso;
+		}
+		else
+		{
+			if(peso>pesoMax)
+			{
+				pesoMax=peso;
+				pesoMaxMarca=marca;
+			}
+			else
+			{
+				if(peso<pesoMin)
+				{
+					pesoMin=peso;
+				}
+			}
+		}
+
+		if(temp<0)
+		{
+			contadorBajoCero++;
+		}
+
+
+
+		contador++;
+		respuesta=prompt("Ingresar otro producto?");
+	}
+
+	promedioPeso=acumuladorPeso/contador;
+
+	document.write("A) Cant. de temp pares: "+contadorPares+"<br>"+
+		"B) Marca mas pesado: "+pesoMaxMarca+"<br>"+
+		"C) Productos bajo cero: "+contadorBajoCero+"<br>"+
+		"D) Promedio: "+promedioPeso+"<br>"+
+		"F) Peso max y min: "+pesoMax+", "+pesoMin);
+
+}
+
+
+/*
+
+
 	var pais;
 	var superficie;
 	var respuesta;
@@ -101,8 +196,5 @@ function mostrar()
 		"5) Promedio de km: "+promedio+"<br>"+
 		"6) Pais con menor territori: "+paisSupMenor);
 
-	
 
-
-
-}
+*/
