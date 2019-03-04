@@ -16,11 +16,15 @@ function mostrar()
 	var acumuladorPeso;
 	var promedioPeso;
 
+	//Creo las variables e inicializo contadores
+
 	respuesta="si";
 	contador=0;
 	contadorPares=0;
 	contadorBajoCero=0;
 	acumuladorPeso=0;
+
+	//Ingreso solo cuando la respuesta del usuario es "si"
 
 	while(respuesta=="si")
 	{
@@ -35,6 +39,8 @@ function mostrar()
 			peso=parseInt(peso);
 		}
 
+		//Pido, valido y parseo nombre y peso. Si es valido acumulo para luego sacar promedio
+
 		acumuladorPeso=acumuladorPeso+peso;
 
 		temp=prompt("Ingrese la temperatura");
@@ -46,11 +52,13 @@ function mostrar()
 			temp=parseInt(temp);
 		}
 
+		//Pido y valido temp, y si es valida, cuento cuantas son bajo cero, y calculo min y max peso.
+
 		if(temp<0)
 		{
 			contadorBajoCero++;
 
-			if(contador==0)
+			if(contadorBajoCero==1)
 			{
 				bajoCeroPesoMax=peso;
 				bajoCeroPesoMin=peso;
@@ -71,10 +79,14 @@ function mostrar()
 			}
 		}
 
+		//Cuento temperaturas pares
+
 		if(temp%2==0)
 		{
 			contadorPares++
 		}
+
+		//Calculo peso max para obtener nombre y temperatura
 
 		if(contador==0)
 		{
@@ -92,9 +104,10 @@ function mostrar()
 			}
 		}
 
-
 		contador++;
 		respuesta=prompt("Ingresar otro animal?");
+
+		//Acumulo un contador, y pregunto al usuario si quiere ingresar otro dato
 
 	}
 

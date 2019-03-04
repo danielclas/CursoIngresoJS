@@ -1,6 +1,120 @@
 function mostrar()
 {
-	var marca;
+	
+	var nota;
+	var edad;
+	var sexo;
+	var contador;
+	var acumuladorNotas;
+	var promedio;
+	var notaMin;
+	var notaMinSexo;
+	var contadorMas18;
+	var edadMin;
+	var edadMinNota;
+	var edadMinSexo;
+	var primerMujerEdad;
+	var primerMujerNota;
+	var mensaje;
+
+	contador=0;
+	acumuladorNotas=0;
+	contadorMas18=0;
+	bandera=true;
+
+	while(contador<5)
+	{
+		nota=prompt("Ingrese la nota");
+		nota=parseInt(nota);
+
+		while(nota<1 || nota>10)
+		{
+			nota=prompt("Ingrese una nota valida");
+			nota=parseInt(nota);
+		}
+
+		acumuladorNotas=acumuladorNotas+nota;
+
+		edad=prompt("Ingrese la edad");
+		edad=parseInt(edad);
+
+		while(edad<0)
+		{
+			edad=prompt("Ingrese una edad valida");
+			edad=parseInt(edad);
+		}
+
+		sexo=prompt("Ingrese el sexo");
+
+		while(sexo!="f" && sexo!="m")
+		{
+			sexo=prompt("Ingrese un sexo valido");
+		}
+
+		if(contador==0)
+		{
+			notaMin=nota;
+			notaMinSexo=sexo;
+
+			edadMin=edad;
+			edadMinSexo=sexo;
+			edadMinNota=nota;
+		}
+		else
+		{
+			if(nota<notaMin)
+			{
+				notaMin=nota;
+				notaMinSexo=sexo;
+			}
+			if(edad<edadMin)
+			{
+				edadMin=edad;
+				edadMinSexo=sexo;
+				edadMinNota=nota;
+			}
+		}
+
+		if(edad>18 && sexo=="m" && nota>=6)
+		{
+			contadorMas18++;
+		}
+
+		if(sexo=="f" && bandera==true)
+		{
+			primerMujerNota=nota;
+			primerMujerEdad=edad;
+			mensaje="Primer mujer, edad: "+primerMujerEdad+", nota: "+primerMujerNota;
+			bandera=false;
+		}
+
+		contador++;
+
+	}
+
+	promedio=acumuladorNotas/contador;
+
+	if(bandera==true)
+	{
+		mensaje="No se ingresaron mujeres";
+	}
+
+	alert("A) Promedio total de las nota: "+promedio+" || "+
+		"B) Nota mas baja y sexo: "+notaMin+notaMinSexo+" || "+
+		"C) Varones +18 nota mayor o igual a 6: "+contadorMas18+" || "+
+		"D) Sexo y nota del mas joven: "+edadMinNota+edadMinSexo+" || "+
+		"E) "+mensaje);
+
+
+
+
+
+
+}
+
+
+/*
+var marca;
 	var peso;
 	var temp;
 	var respuesta;
@@ -89,11 +203,4 @@ function mostrar()
 
 
 
-
-
-
-
-
-
-
-}
+*/
