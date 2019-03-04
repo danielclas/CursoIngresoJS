@@ -6,14 +6,14 @@ y una de las cuatro operaciones básicas (suma, resta,
  el resultado de la operación y presionar el botón Aceptar.
 se debe informar si el resultado es el correcto o no.
 */
-var respuesta;
+var respuestaCorrecta;
+
 function comenzar()
 {
 	var numero1;
 	var numero2;
 	var operaciones;
 	var operador;
-	var respuestaCorrecta;
 
 	numero1=Math.floor((Math.random()*10)+1);
 	numero2=Math.floor((Math.random()*10)+1);
@@ -34,7 +34,6 @@ function comenzar()
 			operador="-";
 				break;
 	}
-
 	switch(operador)
 	{
 		case "*":
@@ -51,6 +50,8 @@ function comenzar()
 				break;
 	}
 
+	
+
 	console.log(respuestaCorrecta);
 
 	document.getElementById('PrimerNumero').value=numero1;
@@ -61,6 +62,9 @@ function comenzar()
 		
 
 }//FIN DE LA FUNCIÓN
+
+
+
 function Responder()
 {
 	var mensaje;
